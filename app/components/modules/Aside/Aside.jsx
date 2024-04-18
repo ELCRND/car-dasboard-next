@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Aside = () => {
+  const pathname = usePathname();
   return (
     <aside className="row-start-1 row-end-3 col-start-1 col-end-2 py-7 px-6 flex flex-col relative bg-white">
       <div>
@@ -15,96 +18,149 @@ const Aside = () => {
       </div>
       <div className="mt-9">
         <ul className="flex flex-col gap-[10px]">
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/dashboard_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link className="ml-3 text-sm font-medium text-[#5f6165]" href="/">
               Dasboard
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/assets" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/assets_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/assets"
+            >
               Assets
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/booking" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/booking_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/booking"
+            >
               Booking
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/sellCars" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/sell-cars_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/sellCars"
+            >
               Sell Cars
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/buyCars" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/buy-cars_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/buyCars"
+            >
               Buy Cars
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/services" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/services_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/services"
+            >
               Services
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/calendar" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/calendar_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/calendar"
+            >
               Calendar
-            </a>
+            </Link>
           </li>
-          <li className="_nav hover:bg-[#f5f4f6]">
+          <li
+            className={`_nav hover:bg-[#f5f4f6] ${
+              pathname === "/messages" && "bg-[#f5f4f6]"
+            }`}
+          >
             <Image
               width={24}
               height={24}
               src="/img/aside/messages_icon.svg"
               alt=""
             />
-            <a className="ml-3 text-sm font-medium text-[#5f6165]" href="#">
+            <Link
+              className="ml-3 text-sm font-medium text-[#5f6165]"
+              href="/messages"
+            >
               Messages
-            </a>
+            </Link>
           </li>
         </ul>
-        <a
+        <Link
           className="flex items-center gap-2 absolute left-8 bottom-20 "
           href="#"
         >
@@ -115,8 +171,8 @@ const Aside = () => {
             alt=""
           />
           <span className="text-sm font-medium text-[#5f6165]">Settings</span>
-        </a>
-        <a
+        </Link>
+        <Link
           className="flex items-center gap-2 absolute left-8 bottom-7 "
           href="#"
         >
@@ -127,7 +183,7 @@ const Aside = () => {
             alt=""
           />
           <span className="text-sm font-medium text-[#5f6165]">Log out</span>
-        </a>
+        </Link>
       </div>
     </aside>
   );

@@ -4,7 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 
 Chart.register(ArcElement, Legend);
 
-const myDoughnut = ({ labels, scalesBg, data, textColor }) => {
+const ImpressionShare = () => {
   return (
     <div className="max-w-[100px] max-h-[100px]">
       <Doughnut
@@ -18,25 +18,25 @@ const myDoughnut = ({ labels, scalesBg, data, textColor }) => {
               labels: {
                 textAlign: "center",
                 boxWidth: 0,
-                color: textColor,
+                color: "#70CF97",
                 font: {
                   size: 24,
                 },
               },
             },
           },
-          circumference: 230,
-          rotation: -115,
+          circumference: 280,
+          rotation: -140,
           borderRadius: 0,
-          cutout: 41,
+          cutout: 35,
         }}
         data={{
-          labels: labels,
+          labels: ["55%   "],
           datasets: [
             {
-              data: data,
+              data: [55, 45],
               borderWidth: 0,
-              backgroundColor: scalesBg,
+              backgroundColor: ["#70CF97", "#F4F5F9"],
             },
           ],
         }}
@@ -44,4 +44,4 @@ const myDoughnut = ({ labels, scalesBg, data, textColor }) => {
     </div>
   );
 };
-export default myDoughnut;
+export default ImpressionShare;

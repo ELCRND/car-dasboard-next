@@ -7,6 +7,7 @@ import {
   PointElement,
   Tooltip,
   Legend,
+  Filler,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -15,15 +16,18 @@ Chart.register(
   CategoryScale,
   LinearScale,
   PointElement,
+  Filler,
   Tooltip,
   Legend
 );
 
 const carLine = ({ data, labels, max }) => {
   return (
-    <div className="w-[418px]">
+    <div className="w-[448px] h-[160px] mx-auto">
       <Line
         options={{
+          responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false,
@@ -68,14 +72,18 @@ const carLine = ({ data, labels, max }) => {
               data: data,
               categoryPercentage: 1,
               barPercentage: 1,
-              backgroundColor: "#F4F5F9",
               barThickness: 28,
-              hoverBackgroundColor: "#2884FF",
               pointStyle: false,
-              fill: true,
+              fill: "start",
               borderWidth: 2,
-              borderColor: "rgb(255, 118, 76)",
-
+              borderColor: "rgba(255, 118, 76,0.5)",
+              backgroundColor: function (context) {
+                const ctx = context.chart.ctx;
+                const gradient = ctx.createLinearGradient(0, 0, 0, 182.6);
+                gradient.addColorStop(0, "rgba(250, 174, 50, 0.22)");
+                gradient.addColorStop(1, "rgba(250, 174, 50, 0.001)");
+                return gradient;
+              },
               tension: 0.2,
             },
           ],

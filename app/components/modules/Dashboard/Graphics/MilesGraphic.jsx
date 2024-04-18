@@ -19,10 +19,10 @@ const milesStatisticsData = {
 
 const MilesGraphic = () => {
   let [data, setData] = useState(milesStatisticsData.data);
-  let [labels, setLabels] = useState(milesStatisticsData.data);
+  let [labels, setLabels] = useState(milesStatisticsData.dailyDataLabels);
   let [max, setMax] = useState(200);
   return (
-    <div className="w-[488px] py-4 px-6 rounded-2xl bg-white">
+    <div className="w-full py-4 px-6 rounded-2xl bg-white">
       <h3 className="text-xl font-bold">Miles Statistics</h3>
       <div className="mt-6 mb-3">
         <label className="ml-3 py-2 px-3 rounded-3xl text-xs font-bold transition-colors">

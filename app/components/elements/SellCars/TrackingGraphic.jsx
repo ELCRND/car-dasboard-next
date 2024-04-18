@@ -11,9 +11,9 @@ import { Bar } from "react-chartjs-2";
 
 Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const milesBar = ({ labels, data, max }) => {
+const TrackingGraphic = ({ labels, data, max }) => {
   return (
-    <div className="w-[418px] h-[160px] mx-auto">
+    <div className="w-[297px] h-[286px] mx-auto">
       <Bar
         options={{
           responsive: true,
@@ -23,15 +23,11 @@ const milesBar = ({ labels, data, max }) => {
               display: false,
             },
             tooltip: {
+              displayColors: false,
               callbacks: {
+                title: () => "",
                 label: function (context) {
-                  return context.raw + "k";
-                },
-                labelColor: function () {
-                  return {
-                    backgroundColor: "#2884FF",
-                    borderRadius: 5,
-                  };
+                  return context.raw + "km/h";
                 },
               },
             },
@@ -39,16 +35,20 @@ const milesBar = ({ labels, data, max }) => {
           scales: {
             y: {
               max: max,
-              display: false,
-            },
-            x: {
+              border: {
+                dash: [6, 4],
+              },
               grid: {
-                tickLength: 0,
                 color: "#F2F2F2",
               },
               ticks: {
                 autoSkip: true,
                 color: "#808191",
+              },
+            },
+            x: {
+              grid: {
+                display: false,
               },
             },
           },
@@ -59,11 +59,10 @@ const milesBar = ({ labels, data, max }) => {
             {
               label: "",
               data: data,
-              categoryPercentage: 1,
-              barPercentage: 1,
-              backgroundColor: "#F4F5F9",
-              barThickness: 28,
-              hoverBackgroundColor: "#2884FF",
+              backgroundColor: "rgba(255, 126, 134, 0.1)",
+              barThickness: 24,
+              hoverBackgroundColor: "#FF6370",
+              borderRadius: 20,
             },
           ],
         }}
@@ -71,4 +70,4 @@ const milesBar = ({ labels, data, max }) => {
     </div>
   );
 };
-export default milesBar;
+export default TrackingGraphic;

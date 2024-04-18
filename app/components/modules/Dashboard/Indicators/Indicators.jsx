@@ -6,7 +6,7 @@ import TireWear from "./TireWear";
 
 const Indicators = () => {
   return (
-    <section className="grid place-items-center  grid-cols-[repeat(auto-fit,minmax(232px,1fr))]">
+    <section className="grid place-items-center gap-7  grid-cols-[repeat(auto-fit,minmax(232px,1fr))]">
       <Energy />
       <Range />
       <BreakFluid />

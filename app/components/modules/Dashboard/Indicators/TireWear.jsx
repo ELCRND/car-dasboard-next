@@ -2,7 +2,7 @@ import Image from "next/image";
 import Doughnut from "./chart/myDoughnut";
 const TireWear = () => {
   return (
-    <div className="w-[232px] py-4 px-5 flex flex-col items-center rounded-2xl bg-white">
+    <div className="w-full py-3 px-5 flex flex-col items-center rounded-2xl bg-white">
       <Image
         className="w-10 h-10 py-2 px-3 rounded-full bg-[rgb(246_204_13)] bg-opacity-10"
         src="/img/dashboard/tire-wear-icon.svg"

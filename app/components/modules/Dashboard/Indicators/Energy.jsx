@@ -3,7 +3,7 @@ import Doughnut from "./chart/myDoughnut";
 
 const Energy = () => {
   return (
-    <div className="w-[232px] py-4 px-5 flex flex-col items-center rounded-2xl bg-[#a162f7]">
+    <div className="w-full py-3 px-5 flex flex-col items-center rounded-2xl bg-[#a162f7]">
       <Image
         className="w-10 h-10 py-2 px-3 rounded-full bg-[rgb(166_111_240)] "
         src="/img/dashboard/enegry-icon.svg"
