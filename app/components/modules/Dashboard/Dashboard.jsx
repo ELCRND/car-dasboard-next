@@ -4,7 +4,7 @@ import Cars from "./Cars/Cars";
 
 const Dashboard = () => {
   return (
-    <article className="p-7 bg-[#f5f5f5]">
+    <article className="p-7 bg-[#f5f5f5] overflow-y-scroll">
       <Indicators />
       <Graphics />
       <Cars />

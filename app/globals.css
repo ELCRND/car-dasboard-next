@@ -97,7 +97,6 @@
   }
   ._flipper {
     position: relative;
-    width: 100%;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transition: 0.7s linear;

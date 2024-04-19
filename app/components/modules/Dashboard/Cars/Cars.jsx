@@ -3,9 +3,9 @@ import Flip from "../../../elements/Dashboard/Flip";
 
 const Cars = () => {
   return (
-    <section className="grid grid-cols-[repeat(auto-fit,minmax(318px,1fr))] gap-8 relative  _car-flip-wrapper">
-      <div className="_flipper">
-        <div className=" py-4 px-7 rounded-2xl bg-[#E1DFA4] _front">
+    <section className="grid grid-rows-1 grid-cols-[repeat(auto-fit,minmax(318px,1fr))] gap-8 relative _car-flip-wrapper">
+      <div className="_flipper w-[320px] h-[225px] lg:mx-0 mx-auto">
+        <div className="h-full py-4 px-7 rounded-2xl bg-[#E1DFA4] _front">
           <Image
             className="inline"
             width={16}
@@ -46,7 +46,7 @@ const Cars = () => {
             </span>
           </div>
         </div>
-        <div className=" py-4 px-7 rounded-2xl bg-[#E1DFA4] _back">
+        <div className="h-full py-4 px-7 rounded-2xl bg-[#E1DFA4] _back">
           <Image
             className="inline"
             width={16}
@@ -89,8 +89,8 @@ const Cars = () => {
         </div>
       </div>
 
-      <div className="_flipper">
-        <div className="w-full py-4 px-7 rounded-2xl bg-[#E3ECF1] _front">
+      <div className="_flipper w-[320px] h-[225px] lg:mx-0 mx-auto">
+        <div className="h-full py-4 px-7 rounded-2xl bg-[#E3ECF1] _front">
           <Image
             className="inline"
             width={16}
@@ -131,7 +131,7 @@ const Cars = () => {
             </span>
           </div>
         </div>
-        <div className="w-full py-4 px-7 rounded-2xl bg-[#E3ECF1] _back">
+        <div className="h-full py-4 px-7 rounded-2xl bg-[#E3ECF1] _back">
           <Image
             className="inline"
             width={16}
@@ -174,8 +174,8 @@ const Cars = () => {
         </div>
       </div>
 
-      <div className="_flipper">
-        <div className="w-full py-4 px-7 rounded-2xl bg-[#F4E3E5] _front">
+      <div className="_flipper w-[320px] h-[225px] lg:mx-0 mx-auto">
+        <div className="h-full py-4 px-7 rounded-2xl bg-[#F4E3E5] _front">
           <Image
             className="inline"
             width={16}
@@ -216,7 +216,7 @@ const Cars = () => {
             </span>
           </div>
         </div>
-        <div className="w-full py-4 px-7 rounded-2xl bg-[#F4E3E5] _back">
+        <div className="h-full py-4 px-7 rounded-2xl bg-[#F4E3E5] _back">
           <Image
             className="inline"
             width={16}

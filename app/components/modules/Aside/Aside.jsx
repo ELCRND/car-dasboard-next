@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const Aside = () => {
   const pathname = usePathname();
   return (
-    <aside className="row-start-1 row-end-3 col-start-1 col-end-2 py-7 px-6 flex flex-col relative bg-white">
+    <aside className="md:flex hidden row-start-1 row-end-3 col-start-1 col-end-2 py-7 px-6  flex-col relative bg-white">
       <div>
         <Image
           width={108}
@@ -29,7 +29,10 @@ const Aside = () => {
               src="/img/aside/dashboard_icon.svg"
               alt=""
             />
-            <Link className="ml-3 text-sm font-medium text-[#5f6165]" href="/">
+            <Link
+              className="w-full ml-3 text-sm font-medium text-[#5f6165]"
+              href="/"
+            >
               Dasboard
             </Link>
           </li>
@@ -45,7 +48,7 @@ const Aside = () => {
               alt=""
             />
             <Link
-              className="ml-3 text-sm font-medium text-[#5f6165]"
+              className="w-full ml-3 text-sm font-medium text-[#5f6165]"
               href="/assets"
             >
               Assets
@@ -63,7 +66,7 @@ const Aside = () => {
               alt=""
             />
             <Link
-              className="ml-3 text-sm font-medium text-[#5f6165]"
+              className="w-full ml-3 text-sm font-medium text-[#5f6165]"
               href="/booking"
             >
               Booking
@@ -81,7 +84,7 @@ const Aside = () => {
               alt=""
             />
             <Link
-              className="ml-3 text-sm font-medium text-[#5f6165]"
+              className="w-full ml-3 text-sm font-medium text-[#5f6165]"
               href="/sellCars"
             >
               Sell Cars

@@ -13,7 +13,7 @@ Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const milesBar = ({ labels, data, max }) => {
   return (
-    <div className=" mx-auto">
+    <div className=" mx-auto overflow-x-scroll">
       <Bar
         options={{
           responsive: true,
