@@ -13,7 +13,7 @@ Chart.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const milesBar = ({ labels, data, max }) => {
   return (
-    <div className="w-[418px] h-[160px] mx-auto">
+    <div className=" mx-auto">
       <Bar
         options={{
           responsive: true,

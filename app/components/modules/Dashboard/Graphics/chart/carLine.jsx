@@ -23,7 +23,7 @@ Chart.register(
 
 const carLine = ({ data, labels, max }) => {
   return (
-    <div className="w-[448px] h-[160px] mx-auto">
+    <div className="mx-auto">
       <Line
         options={{
           responsive: true,

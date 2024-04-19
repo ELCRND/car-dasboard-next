@@ -7,7 +7,7 @@ const Header = () => {
         <button className="header__submit">
           <Image src="/img/search_btn.svg" alt="" width={24} height={24} />
         </button>
-        <input className="w-full" type="search" />
+        <input className="w-full px-2" type="search" />
       </form>
       <button className="ml-auto mr-10">
         <Image src="/img/notification.svg" alt="" width={16} height={16} />

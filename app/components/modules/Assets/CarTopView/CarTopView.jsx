@@ -3,7 +3,7 @@ import React from "react";
 
 const CarTopView = () => {
   return (
-    <section className="h-[620px] relative p-6 bg-[#438FFE] rounded-2xl">
+    <section className="h-[620px] relative p-6 bg-[#438FFE] rounded-2xl realtive ">
       <div className="grid grid-rows-2 grid-cols-2 gap-y-8">
         <div>
           <h3 className="text-base text-[#c6dcfc]">Fuel Usage</h3>
@@ -23,7 +23,7 @@ const CarTopView = () => {
         </div>
       </div>
       <Image
-        className="absolute top-48 left-1/2 -translate-x-1/2"
+        className="absolute top-48 left-1/2 -translate-x-1/2 _car-top-view"
         src={"/img/assets/car.png"}
         alt={"car top view"}
         width={280}
