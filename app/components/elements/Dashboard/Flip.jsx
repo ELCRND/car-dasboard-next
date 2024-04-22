@@ -1,9 +1,9 @@
 "use client";
+import React from "react";
 
 import Image from "next/image";
-import { forwardRef } from "react";
 
-const Flip = forwardRef((props, ref) => {
+const Flip = React.forwardRef((props, ref) => {
   return (
     <button onClick={() => ref.current.classList.toggle("_flip")}>
       <Image

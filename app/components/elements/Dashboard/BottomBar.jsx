@@ -1,8 +1,8 @@
-import { forwardRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Flip from "./Flip";
 
-const BottomBar = forwardRef((props, ref) => {
+const BottomBar = React.forwardRef((props, ref) => {
   return (
     <div className="mt-4 flex gap-4 items-center">
       <Flip ref={ref} />

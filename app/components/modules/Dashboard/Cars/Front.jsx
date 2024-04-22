@@ -1,8 +1,8 @@
+import React from "react";
 import Image from "next/image";
 import BottomBar from "../../../elements/Dashboard/BottomBar";
-import { forwardRef } from "react";
 
-const Front = forwardRef((props, ref) => {
+const Front = React.forwardRef((props, ref) => {
   const { imgPath, imgDesc, title, reviews } = props;
   return (
     <div
