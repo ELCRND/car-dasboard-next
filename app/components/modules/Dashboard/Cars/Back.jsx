@@ -22,5 +22,5 @@ const Back = React.forwardRef((props, ref) => {
     </div>
   );
 });
-
+Back.displayName = "Back";
 export default Back;

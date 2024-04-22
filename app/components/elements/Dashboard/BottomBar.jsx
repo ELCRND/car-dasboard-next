@@ -30,4 +30,6 @@ const BottomBar = React.forwardRef((props, ref) => {
     </div>
   );
 });
+
+BottomBar.displayName = "BottomBar";
 export default BottomBar;

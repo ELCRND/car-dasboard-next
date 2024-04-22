@@ -15,5 +15,5 @@ const Flip = React.forwardRef((props, ref) => {
     </button>
   );
 });
-
+Flip.displayName = "Flip";
 export default Flip;

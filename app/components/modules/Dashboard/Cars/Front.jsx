@@ -22,5 +22,5 @@ const Front = React.forwardRef((props, ref) => {
     </div>
   );
 });
-
+Front.displayName = "Front";
 export default Front;
