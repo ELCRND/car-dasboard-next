@@ -23,7 +23,7 @@ Chart.register(
 
 const carLine = ({ data, labels, max }) => {
   return (
-    <div className="mx-auto overflow-x-scroll">
+    <div className=" mx-auto">
       <Line
         options={{
           responsive: true,

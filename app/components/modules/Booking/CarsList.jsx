@@ -2,9 +2,13 @@ import Image from "next/image";
 
 let cars;
 
-const CarsList = () => {
+const CarsList = ({ view }) => {
   return (
-    <ul className="mt-7 grid grid-cols-[repeat(auto-fit,minmax(325px,1fr))] gap-5">
+    <ul
+      className={`mt-7 grid ${
+        view ? "grid-cols-" + view : "grid-cols-3"
+      } gap-5`}
+    >
       {cars.map((car) => (
         <li
           key={car.id}
@@ -29,8 +33,8 @@ const CarsList = () => {
             className="mx-auto my-4"
             src={car.image}
             alt={car.name}
-            width={200}
-            height={100}
+            width={600 / view}
+            height={300 / view}
           />
           <div className="flex items-center">
             <span className="mr-2 flex items-center">

@@ -3,7 +3,7 @@ import Doughnut from "./chart/myDoughnut";
 
 const Range = () => {
   return (
-    <div className="w-full py-3 px-5 flex flex-col items-center rounded-2xl bg-white">
+    <div className="w-full py-3 px-5 flex flex-col items-center rounded-2xl bg-white shadow-[0px_2px_4px_0px_rgba(147,144,144,0.2)]">
       <Image
         className="w-10 h-10 py-2 px-3 rounded-full bg-[rgba(255_126_134)] bg-opacity-10"
         src="/img/dashboard/range-icon.svg"

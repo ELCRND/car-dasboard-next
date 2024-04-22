@@ -107,6 +107,19 @@
     animation: carUp 1s linear;
   }
 
+  ._flipper:nth-child(1) ._front,
+  ._flipper:nth-child(1) ._back {
+    background-color: #e1dfa4;
+  }
+  ._flipper:nth-child(2) ._front,
+  ._flipper:nth-child(2) ._back {
+    background-color: #e3ecf1;
+  }
+  ._flipper:nth-child(3) ._front,
+  ._flipper:nth-child(3) ._back {
+    background-color: #f4e3e5;
+  }
+
   @keyframes flip {
     0% {
       -webkit-transform: rotateY(120deg);

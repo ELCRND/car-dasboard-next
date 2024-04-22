@@ -22,12 +22,12 @@ const MilesGraphic = () => {
   let [labels, setLabels] = useState(milesStatisticsData.dailyDataLabels);
   let [max, setMax] = useState(200);
   return (
-    <div className="w-full py-4 px-6 rounded-2xl bg-white">
+    <div className="w-full p-6 rounded-2xl bg-white shadow-[0px_2px_4px_0px_rgba(147,144,144,0.2)]">
       <h3 className="text-xl font-bold">Miles Statistics</h3>
-      <div className="mt-6 mb-3">
-        <label className="ml-3 py-2 px-3 rounded-3xl text-xs font-bold transition-colors">
+      <div className="mt-4 mb-1">
+        <label className="ml-3 py-2 rounded-3xl text-xs font-bold transition-colors cursor-pointer">
           <input
-            className="hidden"
+            className="hidden peer/day"
             type="radio"
             name="milesStatistics"
             id="milesStatistics__day"
@@ -40,11 +40,13 @@ const MilesGraphic = () => {
               }
             }}
           />
-          <span>Day</span>
+          <span className="p-2 rounded-3xl peer-checked/day:text-white peer-checked/day:bg-[#2884FF]">
+            Day
+          </span>
         </label>
-        <label className="ml-3 py-2 px-3 rounded-3xl text-xs font-bold transition-colors">
+        <label className="ml-3 py-2 rounded-3xl text-xs font-bold transition-colors cursor-pointer">
           <input
-            className="hidden"
+            className="hidden peer/week"
             type="radio"
             name="milesStatistics"
             id="milesStatistics__week"
@@ -61,11 +63,13 @@ const MilesGraphic = () => {
               }
             }}
           />
-          <span>Week</span>
+          <span className="p-2 rounded-3xl peer-checked/week:text-white peer-checked/week:bg-[#2884FF]">
+            Week
+          </span>
         </label>
-        <label className="ml-3 py-2 px-3 rounded-3xl text-xs font-bold transition-colors">
+        <label className="ml-3 py-2 rounded-3xl text-xs font-bold transition-colors cursor-pointer">
           <input
-            className="hidden"
+            className="hidden peer/month"
             type="radio"
             name="milesStatistics"
             id="milesStatistics__mounth"
@@ -82,7 +86,9 @@ const MilesGraphic = () => {
               }
             }}
           />
-          <span>Mounth</span>
+          <span className="p-2 rounded-3xl peer-checked/month:text-white peer-checked/month:bg-[#2884FF]">
+            Mounth
+          </span>
         </label>
       </div>
       <MilesBar data={data} labels={labels} max={max} />

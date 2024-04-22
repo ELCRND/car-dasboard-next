@@ -1,16 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { forwardRef } from "react";
 
-const Flip = () => {
+const Flip = forwardRef((props, ref) => {
   return (
-    <button
-      onClick={(e) =>
-        e.target.parentNode.parentNode.parentNode.parentNode.classList.toggle(
-          "_flip"
-        )
-      }
-    >
+    <button onClick={() => ref.current.classList.toggle("_flip")}>
       <Image
         width={16}
         height={16}
@@ -19,6 +14,6 @@ const Flip = () => {
       />
     </button>
   );
-};
+});
 
 export default Flip;
